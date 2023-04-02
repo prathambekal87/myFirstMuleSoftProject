@@ -24,12 +24,32 @@
 				<artifactId>maven-clean-plugin</artifactId>
 				<version>3.2.0</version>
 			</plugin>
+			
 			<plugin>
-				<groupId>org.mule.tools.maven</groupId>
-				<artifactId>mule-maven-plugin</artifactId>
-				<version>${mule.maven.plugin.version}</version>
-				<extensions>true</extensions>
+  				<groupId>org.mule.tools.maven</groupId>
+  				<artifactId>mule-maven-plugin</artifactId>
+  				<extensions>true</extensions>
+  				
+  				<configuration>
+    				<cloudHubDeployment>
+      					<uri>https://anypoint.mulesoft.com</uri>
+      					<muleVersion>${mule.version}</muleVersion>
+      					
+      					<!-- -User Paramaeter -->
+      					
+      					<username>${anypoint.username}</username>
+      					<password>${anypoint.password}</password>
+      					
+      					<applicationName>${appname}</applicationName>
+      					<environment>${env}</environment>
+      					<businessGroup>${busniess}</businessGroup>
+      					<region>${region}</region>
+      					<workers>${workers}</workers>
+      					<workerType>${vCore}</workerType>
+    				</cloudHubDeployment>
+  				</configuration>
 			</plugin>
+			
 		</plugins>
 	</build>
 
