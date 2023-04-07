@@ -16,7 +16,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 output application/json
 ---
 {
-	"Message":"Demo Project Working Fine"
+	"Message":"Demo Project Working Fine OK!"
 }]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
