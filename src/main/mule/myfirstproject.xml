@@ -20,6 +20,14 @@ output application/json
 }]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
+		<ee:transform doc:name="Transform Message" doc:id="c0987d8d-2202-4c06-a7c5-f6b2dfc533e7" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/java
+---
+payload.Message ++ " Changes Done"]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
 		<logger level="INFO" doc:name="Logger" doc:id="58b2de67-c5b6-4c7d-9491-915f62882ee7" message="#[payload]"/>
 	</flow>
 </mule>
